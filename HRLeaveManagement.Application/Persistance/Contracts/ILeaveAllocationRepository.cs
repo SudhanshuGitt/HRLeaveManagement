@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRLeaveManagement.Application.Persistance.Contracts
 {
-    public interface ILeaveAllocationRepository :IGenricRepository<LeaveAllocation>
+    public interface ILeaveAllocationRepository :IGenericRepository<LeaveAllocation>
     {
         Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id);
         Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails();

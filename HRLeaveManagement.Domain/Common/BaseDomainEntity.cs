@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HRLeaveManagement.Domain.Common
 {
-    public abstract class BaseDomainIdentity
+    public abstract class BaseDomainEntity
     {
         public int Id { get; set; }
         public DateTime DateCreated { get; set; }

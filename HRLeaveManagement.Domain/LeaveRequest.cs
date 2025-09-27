@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HRLeaveManagement.Domain
 {
-    public class LeaveRequest : BaseDomainIdentity
+    public class LeaveRequest : BaseDomainEntity
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

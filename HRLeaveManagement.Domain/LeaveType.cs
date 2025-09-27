@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HRLeaveManagement.Domain
 {
-    public class LeaveType : BaseDomainIdentity
+    public class LeaveType : BaseDomainEntity
     {
         public string Name { get; set; }
         public int DefaultDays { get; set; }
