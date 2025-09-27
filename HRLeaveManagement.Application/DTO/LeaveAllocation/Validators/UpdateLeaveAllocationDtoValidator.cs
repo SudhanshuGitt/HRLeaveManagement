@@ -6,11 +6,11 @@ using System.Text;
 
 namespace HRLeaveManagement.Application.DTO.LeaveAllocation.Validators
 {
-    public class UpdateLeaveAllocationValidator:AbstractValidator<UpdateLeaveAllocationDto>
+    public class UpdateLeaveAllocationDtoValidator:AbstractValidator<UpdateLeaveAllocationDto>
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
 
-        public UpdateLeaveAllocationValidator(ILeaveTypeRepository leaveTypeRepository)
+        public UpdateLeaveAllocationDtoValidator(ILeaveTypeRepository leaveTypeRepository)
         {
             _leaveTypeRepository = leaveTypeRepository;
             Include(new ILeaveAllocationValidator(_leaveTypeRepository));
