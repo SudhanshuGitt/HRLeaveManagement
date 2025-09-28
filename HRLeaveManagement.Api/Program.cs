@@ -1,11 +1,22 @@
+using HRLeaveManagement.Application;
+using HRLeaveManagement.Infrastructure;
+using HRLeaveManagement.Persistance;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.ConfigurePersistanceServices(builder.Configuration);
+builder.Services.ConfigureInfrastructureServices(builder.Configuration);
+builder.Services.ConfigureApplicationServices();
+
 
 var app = builder.Build();
 
